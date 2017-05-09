@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -42,44 +42,17 @@ namespace Project.ClinicReception.Forms
 
         private void btOk_Click(object sender, EventArgs e)
         {
-            ClientModel clientModel = (ClientModel)cbClient.SelectedItem;
-            DoctorModel doctorModel = (DoctorModel)cbDoctor.SelectedItem;
-
-            Client client = new Client()
-            {
-                Age = clientModel.Age,
-                Id = Guid.NewGuid(),
-                CreateDate = clientModel.CreateDate,
-                EditedDate = clientModel.EditedDate,
-                Phone = clientModel.Phone,
-                Name = clientModel.Name,
-                Sex = clientModel.Sex,
-
-            };
-            Doctor doctor = new Doctor()
-            {
-                Id = Guid.NewGuid(),
-                Age = doctorModel.Age,
-                CreateDate = doctorModel.CreateDate,
-                EditedDate = doctorModel.EditedDate,
-                Graphic = doctorModel.Graphic,
-                Name = doctorModel.Name,
-                Phone = doctorModel.Phone,
-                Sex = doctorModel.Sex,
-                Qualification = doctorModel.Qualification,
-            };
             var order = new OrderModel
             {
                 Id = _orderId,
+                Time = tbTime.Text,
                 ClientOrder = (ClientModel)cbClient.SelectedItem,
                 DoctorOrder = (DoctorModel)cbDoctor.SelectedItem,
-                Time = tbTime.Text,
-                Cabinet = tbCabinet.Text,
-                Price =(double) nudPrice.Value,
+                Cabinet = tbCabinet.Text.Trim(),
+                Price = (double)nudPrice.Value,
                 CreateDate = dtpCreatedDate.Value,
                 EditedDate = dtpEditedDate.Value,
             };
-
             ServiceHelper.Client.EditOrder(order);
         }
     }
