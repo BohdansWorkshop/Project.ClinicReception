@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Project.ClinicReception.Service.DTO" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Project.ClinicReception.Service.DTO" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" />
+  <xs:complexType name="ArrayOfClientModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ClientModel" nillable="true" type="tns:ClientModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfClientModel" nillable="true" type="tns:ArrayOfClientModel" />
+  <xs:complexType name="ClientModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EditedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" minOccurs="0" name="Sex" type="q1:Sex" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ClientModel" nillable="true" type="tns:ClientModel" />
+  <xs:complexType name="ArrayOfDoctorModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DoctorModel" nillable="true" type="tns:DoctorModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDoctorModel" nillable="true" type="tns:ArrayOfDoctorModel" />
+  <xs:complexType name="DoctorModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Age" type="xs:int" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="EditedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Graphic" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" minOccurs="0" name="Qualification" type="q2:DoctorQualification" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" minOccurs="0" name="Sex" type="q3:Sex" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DoctorModel" nillable="true" type="tns:DoctorModel" />
+  <xs:complexType name="ArrayOfOrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="OrderModel" nillable="true" type="tns:OrderModel" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfOrderModel" nillable="true" type="tns:ArrayOfOrderModel" />
+  <xs:complexType name="OrderModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Cabinet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ClientOrder" nillable="true" type="tns:ClientModel" />
+      <xs:element minOccurs="0" name="CreateDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DoctorOrder" nillable="true" type="tns:DoctorModel" />
+      <xs:element minOccurs="0" name="EditedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="Time" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OrderModel" nillable="true" type="tns:OrderModel" />
+</xs:schema>

@@ -1,0 +1,5 @@
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DbEntity\bin\Debug\Project.ClinicReception.DbEntity.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DbEntity\bin\Debug\Project.ClinicReception.DbEntity.pdb
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DbEntity\obj\Debug\Project.ClinicReception.DbEntity.csprojResolveAssemblyReference.cache
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DbEntity\obj\Debug\Project.ClinicReception.DbEntity.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DbEntity\obj\Debug\Project.ClinicReception.DbEntity.pdb

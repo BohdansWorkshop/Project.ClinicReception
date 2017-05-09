@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:simpleType name="Sex">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Male" />
+      <xs:enumeration value="Female" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Sex" nillable="true" type="tns:Sex" />
+  <xs:simpleType name="DoctorQualification">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Allergist" />
+      <xs:enumeration value="Cardiologist" />
+      <xs:enumeration value="Dentist" />
+      <xs:enumeration value="Dermatologist" />
+      <xs:enumeration value="Endocrinologist" />
+      <xs:enumeration value="Pediatrician" />
+      <xs:enumeration value="Psychiatrist" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DoctorQualification" nillable="true" type="tns:DoctorQualification" />
+</xs:schema>

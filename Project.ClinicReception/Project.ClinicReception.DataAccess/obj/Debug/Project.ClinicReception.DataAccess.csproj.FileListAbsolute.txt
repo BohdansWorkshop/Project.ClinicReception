@@ -1,0 +1,15 @@
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\Project.ClinicReception.DataAccess.dll.config
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\Project.ClinicReception.DataAccess.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\Project.ClinicReception.DataAccess.pdb
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\EntityFramework.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\EntityFramework.xml
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\obj\Debug\Project.ClinicReception.DataAccess.csprojResolveAssemblyReference.cache
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\obj\Debug\Project.ClinicReception.DataAccess.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\obj\Debug\Project.ClinicReception.DataAccess.pdb
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\Project.ClinicReception.DbEntity.dll
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\bin\Debug\Project.ClinicReception.DbEntity.pdb
+C:\Users\Helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\obj\Debug\Project.ClinicReception.DataAccess.Migrations.InitialCreate.resources
+C:\Users\Helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\obj\Debug\Project.ClinicReception.DataAccess.csproj.GenerateResource.Cache
+C:\Users\Helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception.DataAccess\obj\Debug\Project.ClinicReception.DataAccess.Migrations.Clients.resources

@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ReceptionService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Project.ClinicReception.Service.DTO" />
+      <xsd:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity.Enums" />
+      <xsd:import schemaLocation="http://localhost:30944/ReceptionService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/Project.ClinicReception.DbEntity" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IReceptionService_GetClients_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetClients" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetClients_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetClientsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDoctors_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctors" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDoctors_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDoctorsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetOrders_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrders" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetOrders_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOrdersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDetailClientInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailClientInfo" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDetailClientInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailClientInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDetailDoctorInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailDoctorInfo" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDetailDoctorInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailDoctorInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDetailOrderInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailOrderInfo" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_GetDetailOrderInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDetailOrderInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddClient" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_EditClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditClient" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_EditClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_DeleteClient_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClient" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_DeleteClient_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteClientResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_DeleteDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_DeleteDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_EditDoctor_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditDoctor" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_EditDoctor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditDoctorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrder" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_DeleteOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrder" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_DeleteOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_EditOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditOrder" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_EditOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccount" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_AddAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_FindAccount_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindAccount" />
+  </wsdl:message>
+  <wsdl:message name="IReceptionService_FindAccount_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindAccountResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IReceptionService">
+    <wsdl:operation name="GetClients">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/GetClients" message="tns:IReceptionService_GetClients_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/GetClientsResponse" message="tns:IReceptionService_GetClients_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctors">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/GetDoctors" message="tns:IReceptionService_GetDoctors_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/GetDoctorsResponse" message="tns:IReceptionService_GetDoctors_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/GetOrders" message="tns:IReceptionService_GetOrders_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/GetOrdersResponse" message="tns:IReceptionService_GetOrders_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailClientInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/GetDetailClientInfo" message="tns:IReceptionService_GetDetailClientInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/GetDetailClientInfoResponse" message="tns:IReceptionService_GetDetailClientInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailDoctorInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/GetDetailDoctorInfo" message="tns:IReceptionService_GetDetailDoctorInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/GetDetailDoctorInfoResponse" message="tns:IReceptionService_GetDetailDoctorInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailOrderInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/GetDetailOrderInfo" message="tns:IReceptionService_GetDetailOrderInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/GetDetailOrderInfoResponse" message="tns:IReceptionService_GetDetailOrderInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/AddClient" message="tns:IReceptionService_AddClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/AddClientResponse" message="tns:IReceptionService_AddClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/EditClient" message="tns:IReceptionService_EditClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/EditClientResponse" message="tns:IReceptionService_EditClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/DeleteClient" message="tns:IReceptionService_DeleteClient_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/DeleteClientResponse" message="tns:IReceptionService_DeleteClient_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/AddDoctor" message="tns:IReceptionService_AddDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/AddDoctorResponse" message="tns:IReceptionService_AddDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/DeleteDoctor" message="tns:IReceptionService_DeleteDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/DeleteDoctorResponse" message="tns:IReceptionService_DeleteDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditDoctor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/EditDoctor" message="tns:IReceptionService_EditDoctor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/EditDoctorResponse" message="tns:IReceptionService_EditDoctor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/AddOrder" message="tns:IReceptionService_AddOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/AddOrderResponse" message="tns:IReceptionService_AddOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/DeleteOrder" message="tns:IReceptionService_DeleteOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/DeleteOrderResponse" message="tns:IReceptionService_DeleteOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/EditOrder" message="tns:IReceptionService_EditOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/EditOrderResponse" message="tns:IReceptionService_EditOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/AddAccount" message="tns:IReceptionService_AddAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/AddAccountResponse" message="tns:IReceptionService_AddAccount_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindAccount">
+      <wsdl:input wsaw:Action="http://tempuri.org/IReceptionService/FindAccount" message="tns:IReceptionService_FindAccount_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IReceptionService/FindAccountResponse" message="tns:IReceptionService_FindAccount_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IReceptionService" type="tns:IReceptionService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetClients">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/GetClients" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDoctors">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/GetDoctors" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOrders">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/GetOrders" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailClientInfo">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/GetDetailClientInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailDoctorInfo">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/GetDetailDoctorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDetailOrderInfo">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/GetDetailOrderInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddClient">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/AddClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditClient">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/EditClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteClient">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/DeleteClient" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddDoctor">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/AddDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteDoctor">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/DeleteDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditDoctor">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/EditDoctor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddOrder">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/AddOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteOrder">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/DeleteOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditOrder">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/EditOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddAccount">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/AddAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindAccount">
+      <soap:operation soapAction="http://tempuri.org/IReceptionService/FindAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ReceptionService">
+    <wsdl:port name="BasicHttpBinding_IReceptionService" binding="tns:BasicHttpBinding_IReceptionService">
+      <soap:address location="http://localhost:30944/ReceptionService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

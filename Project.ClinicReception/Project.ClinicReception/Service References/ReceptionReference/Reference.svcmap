@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="72ef8bcc-5d48-41b8-a827-a218f3974284" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:30944/ReceptionService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ReceptionService.xsd" MetadataType="Schema" ID="7acf7e79-7246-4448-ae2a-80ff888b9565" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ReceptionService.wsdl" MetadataType="Wsdl" ID="8942967e-88ec-4633-99df-6a6ff13441a5" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?wsdl" />
+    <MetadataFile FileName="ReceptionService1.xsd" MetadataType="Schema" ID="7f5516d3-0aa4-4a27-a5e4-b9e28d2edf5e" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ReceptionService2.xsd" MetadataType="Schema" ID="bbb44a30-2667-476a-aa44-b0e968646ab6" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?xsd=xsd3" />
+    <MetadataFile FileName="ReceptionService3.xsd" MetadataType="Schema" ID="b669c70d-fc9d-4c3e-91b0-caf792941a9a" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ReceptionService.disco" MetadataType="Disco" ID="2a800f4e-8465-45bd-a1e8-84ee084b6dc9" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?disco" />
+    <MetadataFile FileName="ReceptionService4.xsd" MetadataType="Schema" ID="be566f85-9993-41c6-9c0a-a07f8de9096b" SourceId="1" SourceUrl="http://localhost:30944/ReceptionService.svc?xsd=xsd2" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

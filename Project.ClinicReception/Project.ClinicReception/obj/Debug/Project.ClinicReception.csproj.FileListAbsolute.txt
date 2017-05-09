@@ -1,0 +1,1 @@
+c:\users\helix\documents\visual studio 2015\Projects\ART\ClinicReception\Project.ClinicReception\Project.ClinicReception\bin\Debug\Project.ClinicReception.exe.config
