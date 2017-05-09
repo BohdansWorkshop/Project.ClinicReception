@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Threading;
@@ -9,7 +9,7 @@ namespace Project.ClinicReception.Forms
 {
     public partial class LoginForm : Form
     {
-       //public string Account { get; set; }
+ 
         public LoginForm()
         {
             InitializeComponent();                                 
@@ -19,14 +19,9 @@ namespace Project.ClinicReception.Forms
         {
             string Account = null;
 
-         var foundAccount =  ServiceHelper.Client.FindAccount(tbLogin.Text, tbPassword.Text);
-            foreach (var item in foundAccount)
-            {
-                Account = item.ToString();
+         var foundAccount =  ServiceHelper.Client.FindAccount(tbLogin.Text, tbPassword.Text);         
+                Account = foundAccount.ToString();
                 //Checking password
-                //lbResult.Text = item.ToString();
-            }
-
             if (Account != null || (tbLogin.Text == "1" && tbPassword.Text == "2"))
             {
                 lbResult.ForeColor = Color.Green;
