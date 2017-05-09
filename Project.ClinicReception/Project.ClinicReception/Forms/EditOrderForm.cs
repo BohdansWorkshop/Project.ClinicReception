@@ -19,6 +19,10 @@ namespace Project.ClinicReception.Forms
         {           
             InitializeComponent();
             _orderId = id;
+            cbClient.Items.AddRange(ServiceHelper.Client.GetClients().Cast<object>().ToArray());
+            cbClient.SelectedIndex = 0;
+            cbDoctor.Items.AddRange(ServiceHelper.Client.GetDoctors().Cast<object>().ToArray());
+            cbDoctor.SelectedIndex = 0;
             dtpCreatedDate.Enabled = false;
             FillForm();
         
@@ -30,9 +34,7 @@ namespace Project.ClinicReception.Forms
 
         private void FillForm()
         {          
-            var order = ServiceHelper.Client.GetDetailOrderInfo(_orderId);
-            cbClient.SelectedItem = order.ClientOrder.ToString();
-            cbDoctor.SelectedItem = order.DoctorOrder.ToString();
+            var order = ServiceHelper.Client.GetDetailOrderInfo(_orderId);         
             tbTime.Text = order.Time;
             tbCabinet.Text = order.Cabinet;
             nudPrice.Text = order.Price.ToString();
