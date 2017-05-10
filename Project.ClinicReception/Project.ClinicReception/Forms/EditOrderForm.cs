@@ -19,7 +19,7 @@ namespace Project.ClinicReception.Forms
         {           
             InitializeComponent();
             nudPrice.Minimum = 0;
-            nudPrice.Maximum = 1000;
+            nudPrice.Maximum = 10000;
             _orderId = id;
             cbClient.Items.AddRange(ServiceHelper.Client.GetClients().Cast<object>().ToArray());
             cbClient.SelectedIndex = 0;
@@ -36,7 +36,7 @@ namespace Project.ClinicReception.Forms
 
         private void FillForm()
         {          
-            var order = ServiceHelper.Client.GetDetailOrderInfo(_orderId);         
+            var order = ServiceHelper.Client.GetDetailOrderInfo(_orderId);
             tbTime.Text = order.Time;
             tbCabinet.Text = order.Cabinet;
             nudPrice.Text = order.Price.ToString();
@@ -46,6 +46,7 @@ namespace Project.ClinicReception.Forms
 
         private void btOk_Click(object sender, EventArgs e)
         {
+            ServiceHelper.Client.DeleteOrder(_orderId);
             var order = new OrderModel
             {
                 Id = _orderId,
@@ -57,7 +58,7 @@ namespace Project.ClinicReception.Forms
                 CreateDate = dtpCreatedDate.Value,
                 EditedDate = dtpEditedDate.Value,
             };
-            ServiceHelper.Client.EditOrder(order);
+            ServiceHelper.Client.AddOrder(order);
         }
     }
 }
