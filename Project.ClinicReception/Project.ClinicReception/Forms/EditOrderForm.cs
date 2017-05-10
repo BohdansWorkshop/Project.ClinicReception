@@ -18,6 +18,8 @@ namespace Project.ClinicReception.Forms
         public EditOrderForm(Guid id)
         {           
             InitializeComponent();
+            nudPrice.Minimum = 0;
+            nudPrice.Maximum = 1000;
             _orderId = id;
             cbClient.Items.AddRange(ServiceHelper.Client.GetClients().Cast<object>().ToArray());
             cbClient.SelectedIndex = 0;
